@@ -92,3 +92,10 @@ pub fn binary(lhs: &SyntaxNode, op: &str, rhs: &SyntaxNode) -> types::BinOp {
 pub fn or_default(set: &SyntaxNode, index: &SyntaxNode, default: &SyntaxNode) -> types::OrDefault {
     ast_from_text(&format!("{}.{} or {}", set, index, default))
 }
+
+pub fn multiline_pattern(pattern: &types::Pattern) -> types::Pattern {
+    let wrapped = pattern.entries().map(|ref e| {
+        e.node().text().to_string()
+    }).collect::<Vec<String>>().join("\n, ");
+    ast_from_text(&format!("{{ {}\n}}", wrapped))
+}
