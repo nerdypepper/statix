@@ -8,7 +8,7 @@ use rnix::{
 };
 
 /// ## What it does
-/// Checks for empty list being concatenated.
+/// Checks for concatenations to empty lists
 ///
 /// ## Why is this bad?
 /// Unnecessary code.
