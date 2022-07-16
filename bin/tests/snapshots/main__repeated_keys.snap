@@ -1,0 +1,13 @@
+---
+source: bin/tests/main.rs
+expression: "&out"
+---
+[W20] Warning: Common key paths should not be repeated
+    ╭─[data/repeated_keys.nix:8:3]
+    │
+  8 │ ╭─▶   {
+ 14 │ ├─▶   }
+    · │         
+    · ╰───────── Key foo used 3 or more times. Can be replaced with foo { foo=...; bar=...; }
+────╯
+
