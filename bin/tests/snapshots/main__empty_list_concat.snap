@@ -1,0 +1,40 @@
+---
+source: bin/tests/main.rs
+expression: "&out"
+---
+[W23] Warning: Unnecessary empty list concatenation
+   ╭─[data/empty_list_concat.nix:6:4]
+   │
+ 6 │   ([] ++ [1 2 3])
+   ·    ──────┬──────  
+   ·          ╰──────── Unnecessary empty list concatenation
+───╯
+[W23] Warning: Unnecessary empty list concatenation
+   ╭─[data/empty_list_concat.nix:9:4]
+   │
+ 9 │   ([1 2 3] ++ [])
+   ·    ──────┬──────  
+   ·          ╰──────── Unnecessary empty list concatenation
+───╯
+[W23] Warning: Unnecessary empty list concatenation
+    ╭─[data/empty_list_concat.nix:12:4]
+    │
+ 12 │   ([] ++ [])
+    ·    ────┬───  
+    ·        ╰───── Unnecessary empty list concatenation
+────╯
+[W23] Warning: Unnecessary empty list concatenation
+    ╭─[data/empty_list_concat.nix:15:4]
+    │
+ 15 │   ([] ++ [] ++ [])
+    ·    ───────┬──────  
+    ·           ╰──────── Unnecessary empty list concatenation
+────╯
+[W23] Warning: Unnecessary empty list concatenation
+    ╭─[data/empty_list_concat.nix:15:4]
+    │
+ 15 │   ([] ++ [] ++ [])
+    ·    ────┬───  
+    ·        ╰───── Unnecessary empty list concatenation
+────╯
+
