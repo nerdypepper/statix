@@ -58,12 +58,9 @@ impl Rule for EmptyListConcat {
 }
 
 fn is_empty_array(node: &SyntaxNode) -> bool {
-    if_chain! {
-        if let Some(list) = List::cast(node.clone());
-        then {
-            list.items().count() == 0
-        } else {
-            false
-        }
+    if let Some(list) = List::cast(node.clone()) {
+        list.items().count() == 0
+    } else {
+        false
     }
 }
