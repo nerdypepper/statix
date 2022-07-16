@@ -1,0 +1,12 @@
+---
+source: bin/tests/main.rs
+expression: "&out"
+---
+[W22] Warning: Lib should be the first in the pattern
+   ╭─[data/lib_first.nix:1:1]
+   │
+ 1 │ {foo, lib}:
+   · ─────┬────  
+   ·      ╰────── lib should be the first in the list
+───╯
+
