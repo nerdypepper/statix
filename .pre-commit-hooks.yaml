@@ -1,0 +1,15 @@
+- id: statix-fix
+  name: Statix Fix
+  description: Fix files with statix
+  entry: statix fix
+  types: [nix]
+  pass_filenames: false
+  language: system
+
+- id: statix-check
+  name: Statix Check
+  description: Check files for improvements with statix
+  entry: statix check
+  types: [nix]
+  pass_filenames: false
+  language: system
